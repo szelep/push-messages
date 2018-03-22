@@ -1,0 +1,38 @@
+.push-container {
+     position: fixed;
+     right: 20px;
+     width: 500px;
+     bottom: -100px;
+     background: white;
+     z-index: 999;
+     height: 100px;
+     box-shadow: 0 0 2rem rgba(0,0,0,.2);
+}
+ .push-status {
+     display: inline-block;
+     font-size: 50px;
+     padding: 10px;
+     width: 12%;
+}
+ .push-message {
+     display: inline-block;
+     padding-top: 10px;
+     vertical-align: top;
+     width: 78%;
+     position: relative;
+}
+ .push-message .push-exit {
+     position: absolute;
+     right: 0px;
+     cursor: pointer;
+     color: #9a9898;
+}
+ .push-message .push-exit:hover {
+     color: #00aeff;
+}
+ .push-blue {
+     color: #00aeff 
+}
+ .push-red {
+     color: #f78080;
+}
