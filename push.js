@@ -21,15 +21,17 @@
 
 	function addLocalPush(type, message, guid)
 	{
-	    item = {
+	    var iteme = {
 	        type: type,
 	        message: message,
 	        status: true,
 	        guid: 'P-' + guid
 	    };
 
+
 	    if (localStorage.pushes)
 	    {
+
 	        try
 	        {
 	            items = JSON.parse(localStorage.pushes);
@@ -42,7 +44,8 @@
 	                }
 	            }
 
-	            items[items.length] = item;
+	            items[items.length] = iteme;
+				
 	            localStorage.setItem('pushes', JSON.stringify(items));
 	        }
 	        catch (err)
@@ -52,8 +55,10 @@
 	    }
 	    else
 	    {
-	        localStorage.setItem('pushes', JSON.stringify([item]));
+			
+	        localStorage.setItem('pushes', JSON.stringify([iteme]));
 	    }
+
 	}
 
 	function loadLocalPush()
